@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mobile App Signup</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+ 
+<div class="container">
+  <!-- Welcome Screen -->
+<div class="card active" id="welcome">
+  <h2>Welcome</h2>
+  <p>Please login or sign up to continue using our app.</p>
+  <div class="image-box">
+    <img src="welcome-illustration.jpg" alt="Welcome Image" />
+  </div>
+  <p class="social-label">Enter via Social Networks</p>
+  <div class="social-buttons">
+    <button class="social">f</button>
+    <button class="social">t</button>
+  </div>
+  <p class="or">or login with email</p>
+  <button class="primary" onclick="showCard('signup')">Sign up</button>
+  <p class="footer-text">You already have an account? <a href="#" onclick="showCard('login')">Login</a></p>
+</div>
+
+
+  <!-- Signup Screen -->
+  <div class="card" id="signup">
+    <h2>Sign Up</h2>
+    <p>Please register with email or social networks.</p>
+    <div class="social-buttons">
+      <button class="social">f</button>
+      <button class="social">t</button>
+    </div>
+    <p class="or">or login with email</p>
+    <input type="email" placeholder="jhon.doe@gmail.com" />
+    <input type="password" placeholder="Password" />
+    <label><input type="checkbox" /> I agree with privacy policy</label>
+    <button class="primary">Sign up</button>
+    <p class="footer-text">You already have an account? <a href="#" onclick="showCard('login')">Login</a></p>
+  </div>
+
+  <!-- Login Screen -->
+  <div class="card" id="login">
+    <h2>Login Now</h2>
+    <p>Please login to continue using our app.</p>
+    <div class="social-buttons">
+      <button class="social">f</button>
+      <button class="social">t</button>
+    </div>
+    <p class="or">or login with email</p>
+    <input type="email" placeholder="jhon.doe@gmail.com" />
+    <input type="password" placeholder="Password" />
+    <a href="#" class="forgot">Forgot Password?</a>
+    <button class="primary">Login</button>
+    <p class="footer-text">Don't have an account? <a href="#" onclick="showCard('signup')">Sign up</a></p>
+  </div>
+</div>
+
+<script>
+function showCard(id) {
+  document.querySelectorAll('.card').forEach(card => card.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+}
+</script>
+
+</body>
+</html>
