@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Spice & Bite Menu</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Spice & Bite</h1>
+    <input type="text" id="searchInput" placeholder="Search for food...">
+    <div class="tabs" id="categoryTabs">
+    </div>
+  </header>
+  <main id="menuContainer"></main>
+  <div id="itemModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <img id="modalImage" src="" alt="">
+      <h2 id="modalName"></h2>
+      <p id="modalDesc"></p>
+      <p id="modalPrice"></p>
+      <button onclick="addToCart()">Add to Cart</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
